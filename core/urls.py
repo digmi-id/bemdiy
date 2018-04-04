@@ -18,7 +18,13 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
+from sites import views
+
 urlpatterns = [
+    path('', views.home, name='home'),
+    path('about/', views.about, name='about'),
+    path('contact/', views.contact, name='contact'),
+    path('post/', include('blog.urls')),
     path('admin/', admin.site.urls),
 
     path('summernote/', include('django_summernote.urls')),
