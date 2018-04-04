@@ -1,11 +1,23 @@
 from django.contrib import admin
 from django_summernote.admin import SummernoteModelAdmin
 
-from .models import Artikel
+from .models import Kategori, Tag, Artikel
+
+class KategoriAdmin(admin.ModelAdmin):
+    list_display = ('nama', )
+    list_filter = ['nama']
+    search_fields = ['nama']
+    list_per_page = 25
+
+class TagAdmin(admin.ModelAdmin):
+    list_display = ('nama', )
+    list_filter = ['nama']
+    search_fields = ['nama']
+    list_per_page = 25
 
 class ArtikelAdmin(SummernoteModelAdmin):
     fieldsets = [
-        (None,                  {'fields': ['user', 'judul', 'isi', 'gambar']}),
+        (None,                  {'fields': ['user', 'judul', 'isi', 'kategori', 'tags', 'gambar']}),
         ('Informasi tanggal',   {'fields': ['tanggal_terbit'], 'classes': ['collapse']}),
     ]
     summernote_fields = ('isi', )
@@ -14,4 +26,6 @@ class ArtikelAdmin(SummernoteModelAdmin):
     search_fields = ['judul']
     list_per_page = 3
 
+admin.site.register(Kategori, KategoriAdmin)
+admin.site.register(Tag, TagAdmin)
 admin.site.register(Artikel, ArtikelAdmin)

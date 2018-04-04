@@ -1,13 +1,29 @@
 import datetime
 from django.db import models
 from django.utils import timezone
+from django.contrib.auth.models import User
 
-from akun.models import ProfilPengguna
+class Kategori(models.Model):
+    nama = models.CharField(max_length=32)
+
+    class Meta:
+        verbose_name_plural = "Kategori"
+
+    def __str__(self):
+        return self.nama
+
+class Tag(models.Model):
+    nama = models.CharField(max_length=32)
+
+    def __str__(self):
+        return self.nama
 
 class Artikel(models.Model):
-    user = models.ForeignKey(ProfilPengguna, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     judul = models.CharField(max_length=250)
     isi = models.TextField()
+    kategori = models.ForeignKey(Kategori, on_delete=models.SET_NULL, blank=True, null=True)
+    tags = models.ManyToManyField(Tag)
     gambar = models.ImageField()
     tanggal_terbit = models.DateTimeField('tanggal terbit')
 
