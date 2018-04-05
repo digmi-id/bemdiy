@@ -6,6 +6,8 @@ class ProfilOrganisasi(models.Model):
     alamat_singkat = models.CharField(max_length=100)
     nomor_handphone = models.CharField(max_length=13)
     email = models.EmailField()
+    logo = models.ImageField()
+    favicon = models.ImageField()
 
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
