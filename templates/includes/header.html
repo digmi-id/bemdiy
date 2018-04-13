@@ -66,16 +66,16 @@
 
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="active" href="{% url 'home' %}">Beranda</a>
+                        <a {% if request.path == '/' %} class="active" {% endif %} href="{% url 'home' %}"> Beranda</a>
                     </li>
                     <li>
-                        <a href="{% url 'blog:index' %}">Artikel</a>
+                        <a {% if request.path == '/post/' %} class="active" {% endif %} href="{% url 'blog:index' %}">Artikel</a>
                     </li>
                     <li>
-                        <a href="{% url 'about' %}">Tentang</a>
+                        <a {% if request.path == '/about/' %} class="active" {% endif %} href="{% url 'about' %}">Tentang</a>
                     </li>
                     <li>
-                        <a href="{% url 'contact' %}">Contact</a>
+                        <a {% if request.path == '/contact/' %} class="active" {% endif %} href="{% url 'contact' %}">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -83,27 +83,16 @@
 
         <ul class="wpb-mobile-menu">
             <li>
-                <a class="active" href="{% url 'home' %}">Beranda</a>
+                <a {% if request.path == '/' %} class="active" {% endif %} href="{% url 'home' %}">Beranda</a>
             </li>
             <li>
-                <a href="blog.html">Artikel</a>
-                <ul class="dropdown">
-                    <li>
-                        <a href="blog.html">Tipe 1</a>
-                    </li>
-                    <li>
-                        <a href="blog.html">Tipe 2</a>
-                    </li>
-                    <li>
-                        <a href="blog.html">Tipe 3</a>
-                    </li>
-                </ul>
+                <a {% if request.path == '/post/' %} class="active" {% endif %} href="{% url 'blog:index' %}">Artikel</a>
             </li>
             <li>
-                <a href="{% url 'about' %}">Tentang</a>
+                <a {% if request.path == '/about/' %} class="active" {% endif %} href="{% url 'about' %}">Tentang</a>
             </li>
             <li>
-                <a href="{% url 'contact' %}">Kontak</a>
+                <a {% if request.path == '/contact/' %} class="active" {% endif %} href="{% url 'contact' %}">Contact</a>
             </li>
         </ul>
     </div>
