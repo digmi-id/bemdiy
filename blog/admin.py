@@ -17,7 +17,7 @@ class TagAdmin(admin.ModelAdmin):
 
 class ArtikelAdmin(SummernoteModelAdmin):
     fieldsets = [
-        (None,                  {'fields': ['user', 'judul', 'isi', 'kategori', 'tags', 'gambar']}),
+        (None,                  {'fields': ['user', 'judul', 'sinopsis', 'isi', 'kategori', 'tags', 'gambar']}),
         ('Informasi tanggal',   {'fields': ['tanggal_terbit'], 'classes': ['collapse']}),
     ]
     summernote_fields = ('isi', )

@@ -21,6 +21,7 @@ class Tag(models.Model):
 class Artikel(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     judul = models.CharField(max_length=250)
+    sinopsis = models.TextField()
     isi = models.TextField()
     kategori = models.ForeignKey(Kategori, on_delete=models.SET_NULL, blank=True, null=True)
     tags = models.ManyToManyField(Tag)
