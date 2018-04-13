@@ -14,4 +14,6 @@ def about(request):
 
 def contact(request):
     template_name = 'sites/contact.html'
-    return render(request, template_name, context=None)
+    profile = ProfilOrganisasi.objects.latest('updated_at')
+    context = {'profile': profile}
+    return render(request, template_name, context)
