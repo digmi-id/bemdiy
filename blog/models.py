@@ -47,3 +47,20 @@ class Artikel(models.Model):
 
     def __str__(self):
         return self.judul
+
+class Video(models.Model):
+    judul = models.CharField(max_length=250)
+    url = models.URLField()
+    sinopsis = models.TextField()
+
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        ordering = (
+            'created_at',
+            'updated_at',
+        )
+
+    def __str__(self):
+        return self.judul
