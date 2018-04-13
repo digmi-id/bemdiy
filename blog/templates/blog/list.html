@@ -28,7 +28,7 @@
                                     <i class="fa fa-picture-o"></i>
                                 </div>
                                 <h2>
-                                    <a href="{% url 'blog:detail' artikel.id %}">{{ artikel.judul }}</a>
+                                    <a href="{% url 'blog:detail' artikel.id %}">{{ artikel.judul | title }}</a>
                                 </h2>
                                 <ul class="post-meta">
                                     <li>Oleh <a href="#">{{ artikel.user }}</a></li>
