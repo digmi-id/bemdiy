@@ -2,10 +2,15 @@ from django.db import models
 
 class ProfilOrganisasi(models.Model):
     nama = models.CharField(max_length=100)
+    profil_singkat = models.TextField()
+    profil_lengkap = models.TextField()
+    visi = models.TextField()
+    misi = models.TextField()
     alamat_lengkap = models.TextField()
     alamat_singkat = models.CharField(max_length=100)
     nomor_handphone = models.CharField(max_length=13)
     email = models.EmailField()
+    website = models.URLField()
     logo = models.ImageField()
     favicon = models.ImageField()
 
