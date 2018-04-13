@@ -26,6 +26,24 @@ class ProfilOrganisasi(models.Model):
     def __str__(self):
         return self.nama
 
+class Galeri(models.Model):
+    judul = models.CharField(max_length=200)
+    deskripsi_singkat = models.CharField(max_length=200)
+    gambar = models.ImageField()
+
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        ordering = (
+            'created_at',
+            'updated_at',
+        )
+
+    def __str__(self):
+        return self.judul
+
+
 class SosialMedia(models.Model):
     profil = models.ForeignKey(ProfilOrganisasi, on_delete=models.CASCADE)
     nama = models.CharField(max_length=200)
