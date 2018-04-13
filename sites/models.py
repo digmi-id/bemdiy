@@ -1,5 +1,12 @@
 from django.db import models
 
+class Name(models.Model):
+    
+
+    def __str__(self):
+        return 
+
+
 class ProfilOrganisasi(models.Model):
     nama = models.CharField(max_length=100)
     profil_singkat = models.TextField()
@@ -30,6 +37,7 @@ class Galeri(models.Model):
     judul = models.CharField(max_length=200)
     deskripsi_singkat = models.CharField(max_length=200)
     gambar = models.ImageField()
+    banner = models.BooleanField(default=False, help_text="Apakah gambar ini akan dijadikan sebagai banner?")
 
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
