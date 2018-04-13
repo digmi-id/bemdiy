@@ -117,9 +117,7 @@
             {% include "includes/map.html" %}
         {% endif %}
 
-        <div id="content">
-            {% block content %} {% endblock content %}
-        </div>
+        {% block content %} {% endblock content %}
 
         {% include "includes/footer.html" %}
     </div>
