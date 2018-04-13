@@ -27,7 +27,7 @@ class ArtikelAdmin(SummernoteModelAdmin):
         ('Informasi tanggal',   {'fields': ['tanggal_terbit']}),
     ]
     summernote_fields = ('isi', )
-    list_display = ('judul', 'tanggal_terbit', 'was_published_recently')
+    list_display = ('judul', 'kategori', 'user', 'tanggal_terbit', 'was_published_recently')
     list_filter = ['tanggal_terbit']
     search_fields = ['judul']
     list_per_page = 20
