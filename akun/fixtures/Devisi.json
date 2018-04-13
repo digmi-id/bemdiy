@@ -1,0 +1,101 @@
+[
+{
+    "model": "akun.devisi",
+    "pk": 1,
+    "fields": {
+        "nama": "Pendidikan dan Kebudayaan",
+        "deskripsi": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est vero reprehenderit facilis beatae dolores? Itaque consectetur alias, nesciunt optio corrupti quisquam voluptates.",
+        "icon": "fa-graduation-cap",
+        "created_at": "2018-04-13T21:20:37.180Z",
+        "updated_at": "2018-04-13T21:20:37.180Z"
+    }
+},
+{
+    "model": "akun.devisi",
+    "pk": 2,
+    "fields": {
+        "nama": "Politik dan Hukum",
+        "deskripsi": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est vero reprehenderit facilis beatae dolores? Itaque consectetur alias, nesciunt optio corrupti quisquam voluptates.",
+        "icon": "fa-university",
+        "created_at": "2018-04-13T21:21:21.860Z",
+        "updated_at": "2018-04-13T21:21:21.861Z"
+    }
+},
+{
+    "model": "akun.devisi",
+    "pk": 3,
+    "fields": {
+        "nama": "Ekonomi",
+        "deskripsi": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est vero reprehenderit facilis beatae dolores? Itaque consectetur alias, nesciunt optio corrupti quisquam voluptates.",
+        "icon": "fa-money",
+        "created_at": "2018-04-13T21:21:30.864Z",
+        "updated_at": "2018-04-13T21:21:30.864Z"
+    }
+},
+{
+    "model": "akun.devisi",
+    "pk": 4,
+    "fields": {
+        "nama": "Sosial Kemasyarakatan",
+        "deskripsi": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est vero reprehenderit facilis beatae dolores? Itaque consectetur alias, nesciunt optio corrupti quisquam voluptates.",
+        "icon": "fa-users",
+        "created_at": "2018-04-13T21:21:42.089Z",
+        "updated_at": "2018-04-13T21:21:42.089Z"
+    }
+},
+{
+    "model": "akun.devisi",
+    "pk": 5,
+    "fields": {
+        "nama": "Agama",
+        "deskripsi": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est vero reprehenderit facilis beatae dolores? Itaque consectetur alias, nesciunt optio corrupti quisquam voluptates.",
+        "icon": "fa-heartbeat",
+        "created_at": "2018-04-13T21:21:58.148Z",
+        "updated_at": "2018-04-13T21:21:58.148Z"
+    }
+},
+{
+    "model": "akun.devisi",
+    "pk": 6,
+    "fields": {
+        "nama": "Kesehatan",
+        "deskripsi": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est vero reprehenderit facilis beatae dolores? Itaque consectetur alias, nesciunt optio corrupti quisquam voluptates.",
+        "icon": "fa-medkit",
+        "created_at": "2018-04-13T21:22:16.030Z",
+        "updated_at": "2018-04-13T21:22:16.030Z"
+    }
+},
+{
+    "model": "akun.devisi",
+    "pk": 7,
+    "fields": {
+        "nama": "Keperempuanan",
+        "deskripsi": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est vero reprehenderit facilis beatae dolores? Itaque consectetur alias, nesciunt optio corrupti quisquam voluptates.",
+        "icon": "fa-female",
+        "created_at": "2018-04-13T21:22:26.672Z",
+        "updated_at": "2018-04-13T21:22:26.672Z"
+    }
+},
+{
+    "model": "akun.devisi",
+    "pk": 8,
+    "fields": {
+        "nama": "Aksi dan Advokasi",
+        "deskripsi": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est vero reprehenderit facilis beatae dolores? Itaque consectetur alias, nesciunt optio corrupti quisquam voluptates.",
+        "icon": "fa-bullhorn",
+        "created_at": "2018-04-13T21:22:36.768Z",
+        "updated_at": "2018-04-13T21:22:36.768Z"
+    }
+},
+{
+    "model": "akun.devisi",
+    "pk": 9,
+    "fields": {
+        "nama": "Jaringan dan Komunikasi",
+        "deskripsi": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est vero reprehenderit facilis beatae dolores? Itaque consectetur alias, nesciunt optio corrupti quisquam voluptates.",
+        "icon": "fa-globe",
+        "created_at": "2018-04-13T21:23:20.923Z",
+        "updated_at": "2018-04-13T21:23:20.923Z"
+    }
+}
+]
