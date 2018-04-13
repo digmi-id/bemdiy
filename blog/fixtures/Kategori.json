@@ -1,0 +1,23 @@
+[
+{
+    "model": "blog.kategori",
+    "pk": 1,
+    "fields": {
+        "nama": "Sosial"
+    }
+},
+{
+    "model": "blog.kategori",
+    "pk": 2,
+    "fields": {
+        "nama": "Budaya"
+    }
+},
+{
+    "model": "blog.kategori",
+    "pk": 3,
+    "fields": {
+        "nama": "Agama"
+    }
+}
+]

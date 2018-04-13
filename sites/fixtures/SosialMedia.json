@@ -1,0 +1,35 @@
+[
+{
+    "model": "sites.sosialmedia",
+    "pk": 1,
+    "fields": {
+        "profil": 1,
+        "nama": "facebook",
+        "url": "https://www.facebook.com/",
+        "created_at": "2018-04-05T22:45:00.811Z",
+        "updated_at": "2018-04-05T22:45:00.811Z"
+    }
+},
+{
+    "model": "sites.sosialmedia",
+    "pk": 2,
+    "fields": {
+        "profil": 1,
+        "nama": "twitter",
+        "url": "http://twitter.com/",
+        "created_at": "2018-04-05T22:45:00.812Z",
+        "updated_at": "2018-04-13T18:51:56.902Z"
+    }
+},
+{
+    "model": "sites.sosialmedia",
+    "pk": 3,
+    "fields": {
+        "profil": 1,
+        "nama": "instagram",
+        "url": "http://instagram.com/",
+        "created_at": "2018-04-05T22:45:00.812Z",
+        "updated_at": "2018-04-13T18:51:56.903Z"
+    }
+}
+]

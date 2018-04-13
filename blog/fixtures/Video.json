@@ -1,0 +1,13 @@
+[
+{
+    "model": "blog.video",
+    "pk": 1,
+    "fields": {
+        "judul": "Pernyataan Sikap Koordinator Umum Forum BEM DIY dalam Aksi di DPRD_ Januari 2017",
+        "deskripsi_singkat": "Pernyataan Sikap Koordinator Umum Forum BEM DIY dalam Aksi di DPRD_ Januari 2017",
+        "url": "https://www.youtube.com/embed/VcyqSH2eFP0",
+        "created_at": "2018-04-13T18:33:44.251Z",
+        "updated_at": "2018-04-13T18:36:26.121Z"
+    }
+}
+]
