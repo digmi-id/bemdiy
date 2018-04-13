@@ -11,125 +11,21 @@
     <div class="section" style="padding-top:60px; padding-bottom:30px; border-top:0; border-bottom:0; background:#fff">
         <div class="container">
 
-            <!-- Start Services Icons -->
+            <!-- Start Devisi -->
             <div class="row">
-                <!-- Start Service Icon 1 -->
-                <div class="col-md-4 col-sm-6 service-box service-icon-left">
-                    <div class="service-icon">
-                        <i class="fa fa-magic icon-mini-effect icon-effect-2 gray-icon"></i>
+                {% for devisi in devisis %}
+                    <div class="col-md-4 col-sm-6 service-box service-icon-left">
+                        <div class="service-icon">
+                            <i class="fa {{ devisi.icon }} icon-mini-effect icon-effect-2 gray-icon"></i>
+                        </div>
+                        <div class="service-content">
+                            <h4>{{ devisi.nama }}</h4>
+                            <p>{{ devisi.deskripsi }}</p>
+                        </div>
                     </div>
-                    <div class="service-content">
-                        <h4>High Quality Theme</h4>
-                        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
-                            <strong class="accent-color">odit aut</strong> fugit, sed quia dolores.</p>
-                    </div>
-                </div>
-                <!-- End Service Icon 1 -->
-
-                <!-- Start Service Icon 2 -->
-                <div class="col-md-4 col-sm-6 service-box service-icon-left">
-                    <div class="service-icon">
-                        <i class="fa fa-eye icon-mini-effect icon-effect-2 gray-icon"></i>
-                    </div>
-                    <div class="service-content">
-                        <h4>Retina Display Ready</h4>
-                        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
-                            <strong class="accent-color">odit aut</strong> fugit, sed quia dolores.</p>
-                    </div>
-                </div>
-                <!-- End Service Icon 2 -->
-
-                <!-- Start Service Icon 3 -->
-                <div class="col-md-4 col-sm-6 service-box service-icon-left">
-                    <div class="service-icon">
-                        <i class="fa fa-code icon-mini-effect icon-effect-2 gray-icon"></i>
-                    </div>
-                    <div class="service-content">
-                        <h4>Clean Modern Code</h4>
-                        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
-                            <strong class="accent-color">odit aut</strong> fugit, sed quia dolores.</p>
-                    </div>
-                </div>
-                <!-- End Service Icon 3 -->
-
-                <!-- Start Service Icon 4 -->
-                <div class="col-md-4 col-sm-6 service-box service-icon-left">
-                    <div class="service-icon">
-                        <i class="fa fa-rocket icon-mini-effect icon-effect-2 gray-icon"></i>
-                    </div>
-                    <div class="service-content">
-                        <h4>Fast & Light Theme</h4>
-                        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
-                            <strong class="accent-color">odit aut</strong> fugit, sed quia dolores.</p>
-                    </div>
-                </div>
-                <!-- End Service Icon 4 -->
-
-                <!-- Start Service Icon 5 -->
-                <div class="col-md-4 col-sm-6 service-box service-icon-left">
-                    <div class="service-icon">
-                        <i class="fa fa-download icon-mini-effect icon-effect-2 gray-icon"></i>
-                    </div>
-                    <div class="service-content">
-                        <h4>Free Updates</h4>
-                        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
-                            <strong class="accent-color">odit aut</strong> fugit, sed quia dolores.</p>
-                    </div>
-                </div>
-                <!-- End Service Icon 5 -->
-
-                <!-- Start Service Icon 6 -->
-                <div class="col-md-4 col-sm-6 service-box service-icon-left">
-                    <div class="service-icon">
-                        <i class="fa fa-users icon-mini-effect icon-effect-2 gray-icon"></i>
-                    </div>
-                    <div class="service-content">
-                        <h4>Dedicated Support</h4>
-                        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
-                            <strong class="accent-color">odit aut</strong> fugit, sed quia dolores.</p>
-                    </div>
-                </div>
-                
-                <!-- Start Service Icon 7 -->
-                <div class="col-md-4 col-sm-6 service-box service-icon-left">
-                    <div class="service-icon">
-                        <i class="fa fa-rocket icon-mini-effect icon-effect-2 gray-icon"></i>
-                    </div>
-                    <div class="service-content">
-                        <h4>Fast & Light Theme</h4>
-                        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
-                            <strong class="accent-color">odit aut</strong> fugit, sed quia dolores.</p>
-                    </div>
-                </div>
-                <!-- End Service Icon 7 -->
-                
-                <!-- Start Service Icon 8 -->
-                <div class="col-md-4 col-sm-6 service-box service-icon-left">
-                    <div class="service-icon">
-                        <i class="fa fa-download icon-mini-effect icon-effect-2 gray-icon"></i>
-                    </div>
-                    <div class="service-content">
-                        <h4>Free Updates</h4>
-                        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
-                            <strong class="accent-color">odit aut</strong> fugit, sed quia dolores.</p>
-                    </div>
-                </div>
-                <!-- End Service Icon 8 -->
-                
-                <!-- Start Service Icon 9 -->
-                <div class="col-md-4 col-sm-6 service-box service-icon-left">
-                    <div class="service-icon">
-                        <i class="fa fa-users icon-mini-effect icon-effect-2 gray-icon"></i>
-                    </div>
-                    <div class="service-content">
-                        <h4>Dedicated Support</h4>
-                        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
-                            <strong class="accent-color">odit aut</strong> fugit, sed quia dolores.</p>
-                    </div>
-                </div>
-
+                {% endfor %}
             </div>
-            <!-- End Services Icons -->
+            <!-- End Devisi -->
 
         </div>
     </div>
