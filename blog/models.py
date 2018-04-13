@@ -50,8 +50,8 @@ class Artikel(models.Model):
 
 class Video(models.Model):
     judul = models.CharField(max_length=250)
+    deskripsi_singkat = models.TextField()
     url = models.URLField()
-    sinopsis = models.TextField()
 
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
