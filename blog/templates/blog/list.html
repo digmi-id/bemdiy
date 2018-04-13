@@ -15,11 +15,11 @@
                         <div class="blog-post image-post">
                             <!-- Post Thumb -->
                             <div class="post-head">
-                                <a class="lightbox" title="This is an image title" href="{% static 'images/blog-01.jpg' %}">
+                                <a class="lightbox" title="This is an image title" href="{{ artikel.gambar.url }}">
                                     <div class="thumb-overlay">
                                         <i class="fa fa-arrows-alt"></i>
                                     </div>
-                                    <img alt="" src="{% static 'images/blog-01.jpg' %}">
+                                    <img alt="" src="{{ artikel.gambar.url }}">
                                 </a>
                             </div>
                             <!-- Post Content -->
