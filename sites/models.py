@@ -1,12 +1,5 @@
 from django.db import models
 
-class Name(models.Model):
-    
-
-    def __str__(self):
-        return 
-
-
 class ProfilOrganisasi(models.Model):
     nama = models.CharField(max_length=100)
     profil_singkat = models.TextField()
