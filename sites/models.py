@@ -12,8 +12,8 @@ class ProfilOrganisasi(models.Model):
     email = models.EmailField()
     website = models.URLField()
     logo = models.ImageField()
-    latitude = models.CharField(max_length=100)
-    longitude = models.CharField(max_length=100)
+    latitude = models.CharField(max_length=15)
+    longitude = models.CharField(max_length=15)
     favicon = models.ImageField()
 
     created_at = models.DateTimeField(auto_now_add=True)
