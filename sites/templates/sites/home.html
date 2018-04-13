@@ -5,6 +5,53 @@
 
 {% block content %}
 
+<section id="home">
+    <div id="main-slide" class="carousel slide" data-ride="carousel">
+
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#main-slide" data-slide-to="0" class="active"></li>
+            <li data-target="#main-slide" data-slide-to="1"></li>
+            <li data-target="#main-slide" data-slide-to="2"></li>
+        </ol>
+        <!--/ Indicators end-->
+
+        <!-- Carousel inner -->
+        <div class="carousel-inner">
+            {% for gallery in galleries %}
+                <div class="item {% if forloop.first %} active {% endif %}">
+                    <img class="img-responsive" src="{{ gallery.gambar.url }}" alt="slider">
+                    <div class="slider-content">
+                        <div class="col-md-12 text-center">
+                            <h2 class="animated2">
+                                <span>Forum Badan Eksekutif Mahasiswa <br>
+                                    <strong>D.I Yogyakarta</strong>
+                                </span>
+                            </h2>
+                            <h3 class="animated3">
+                                <span>{{ gallery.judul }}</span>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <!-- Carousel inner end-->
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#main-slide" data-slide="prev">
+            <span>
+                <i class="fa fa-angle-left"></i>
+            </span>
+        </a>
+        <a class="right carousel-control" href="#main-slide" data-slide="next">
+            <span>
+                <i class="fa fa-angle-right"></i>
+            </span>
+        </a>
+    </div>
+</section>
+
 <div id="content" class="full-sections">
 
     <!-- Start Full Width Section 1 -->
@@ -34,17 +81,15 @@
     <!-- Start Full Width Section 2 -->
     <div class="section" style="padding-top:60px; padding-bottom:60px; border-top:1px solid #eee; background:#f9f9f9;">
         <div class="container">
-
             <div class="row">
-
                 <!-- Start Left Side -->
                 <div class="col-md-6">
 
                     <!-- Start Big Heading -->
                     <div class="big-title">
                         <h1>
-                            <strong>More</strong> About Us</h1>
-                        <p class="title-desc">Some Words About Our Company</p>
+                            Kami Untuk <strong>NKRI</strong></h1>
+                        <p class="title-desc">Kontrubusi kami untuk Republik Indonesia</p>
                     </div>
                     <!-- End Big Heading -->
 
@@ -89,13 +134,13 @@
                     <div class="hr1" style="margin-bottom:20px;"></div>
 
                     <!-- Button -->
-                    <a href="#" class="btn-system btn-small">Read More About Us</a>
+                    <a href="#" class="btn-system btn-small">Baca Selengkapnya</a>
                 </div>
                 <!-- End Left Side -->
 
                 <!-- Vimeo Iframe -->
                 <div class="col-md-6">
-                    <iframe src="https://player.vimeo.com/video/63322694?title=0&amp;byline=0&amp;portrait=0" width="800" height="450"></iframe>
+                    <iframe src="{{ video.url }}" width="800" height="450" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
@@ -107,151 +152,38 @@
         <div class="container">
             <!-- Start Team Members -->
             <div class="row">
-
-                <!-- Start Memebr 1 -->
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="team-member">
-                        <!-- Memebr Photo, Name & Position -->
-                        <div class="member-photo">
-                            <img alt="" src="{% static 'images/team/face_1.png' %}" />
-                            <div class="member-name">John Doe
-                                <span>Developer</span>
+                {% for article in articles %}
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="team-member">
+                            <div class="member-photo">
+                                <img alt="" src="{{ article.gambar.url }}" />
+                                <div class="member-name">{{ article.user }}
+                                    <span>{{ article.kategori }}</span>
+                                </div>
+                            </div>
+                            <div class="member-info">
+                                <p>{{ article.sinopsis }}</p>
+                            </div>
+                            <div class="member-socail">
+                                <a class="twitter" href="#">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                                <a class="gplus" href="#">
+                                    <i class="fa fa-google-plus"></i>
+                                </a>
+                                <a class="linkedin" href="#">
+                                    <i class="fa fa-linkedin"></i>
+                                </a>
+                                <a class="flickr" href="#">
+                                    <i class="fa fa-flickr"></i>
+                                </a>
+                                <a class="mail" href="#">
+                                    <i class="fa fa-envelope"></i>
+                                </a>
                             </div>
                         </div>
-                        <!-- Memebr Words -->
-                        <div class="member-info">
-                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore fugiat.</p>
-                        </div>
-                        <!-- Memebr Social Links -->
-                        <div class="member-socail">
-                            <a class="twitter" href="#">
-                                <i class="fa fa-twitter"></i>
-                            </a>
-                            <a class="gplus" href="#">
-                                <i class="fa fa-google-plus"></i>
-                            </a>
-                            <a class="linkedin" href="#">
-                                <i class="fa fa-linkedin"></i>
-                            </a>
-                            <a class="flickr" href="#">
-                                <i class="fa fa-flickr"></i>
-                            </a>
-                            <a class="mail" href="#">
-                                <i class="fa fa-envelope"></i>
-                            </a>
-                        </div>
                     </div>
-                </div>
-                <!-- End Memebr 1 -->
-
-                <!-- Start Memebr 2 -->
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="team-member">
-                        <!-- Memebr Photo, Name & Position -->
-                        <div class="member-photo">
-                            <img alt="" src="{% static 'images/team/face_2.png' %}" />
-                            <div class="member-name">Silly Sally
-                                <span>Developer</span>
-                            </div>
-                        </div>
-                        <!-- Memebr Words -->
-                        <div class="member-info">
-                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore fugiat.</p>
-                        </div>
-                        <!-- Memebr Social Links -->
-                        <div class="member-socail">
-                            <a class="twitter" href="#">
-                                <i class="fa fa-twitter"></i>
-                            </a>
-                            <a class="gplus" href="#">
-                                <i class="fa fa-google-plus"></i>
-                            </a>
-                            <a class="linkedin" href="#">
-                                <i class="fa fa-linkedin"></i>
-                            </a>
-                            <a class="flickr" href="#">
-                                <i class="fa fa-flickr"></i>
-                            </a>
-                            <a class="mail" href="#">
-                                <i class="fa fa-envelope"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Memebr 2 -->
-
-                <!-- Start Memebr 3 -->
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="team-member">
-                        <!-- Memebr Photo, Name & Position -->
-                        <div class="member-photo">
-                            <img alt="" src="{% static 'images/team/face_3.png' %}" />
-                            <div class="member-name">Chris John
-                                <span>Developer</span>
-                            </div>
-                        </div>
-                        <!-- Memebr Words -->
-                        <div class="member-info">
-                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore fugiat.</p>
-                        </div>
-                        <!-- Memebr Social Links -->
-                        <div class="member-socail">
-                            <a class="twitter" href="#">
-                                <i class="fa fa-twitter"></i>
-                            </a>
-                            <a class="gplus" href="#">
-                                <i class="fa fa-google-plus"></i>
-                            </a>
-                            <a class="linkedin" href="#">
-                                <i class="fa fa-linkedin"></i>
-                            </a>
-                            <a class="flickr" href="#">
-                                <i class="fa fa-flickr"></i>
-                            </a>
-                            <a class="mail" href="#">
-                                <i class="fa fa-envelope"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Memebr 3 -->
-
-                <!-- Start Memebr 4 -->
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="team-member">
-                        <!-- Memebr Photo, Name & Position -->
-                        <div class="member-photo">
-                            <img alt="" src="{% static 'images/team/face_4.png' %}" />
-                            <div class="member-name">Sara John
-                                <span>Developer</span>
-                            </div>
-                        </div>
-                        <!-- Memebr Words -->
-                        <div class="member-info">
-                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore fugiat.</p>
-                        </div>
-                        <!-- Memebr Social Links -->
-                        <div class="member-socail">
-                            <a class="twitter" href="#">
-                                <i class="fa fa-twitter"></i>
-                            </a>
-                            <a class="gplus" href="#">
-                                <i class="fa fa-google-plus"></i>
-                            </a>
-                            <a class="linkedin" href="#">
-                                <i class="fa fa-linkedin"></i>
-                            </a>
-                            <a class="flickr" href="#">
-                                <i class="fa fa-flickr"></i>
-                            </a>
-                            <a class="mail" href="#">
-                                <i class="fa fa-envelope"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Memebr 4 -->
-
+                {% endfor %}
             </div>
             <!-- End Team Members -->
 

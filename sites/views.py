@@ -1,12 +1,23 @@
 from django.shortcuts import render
+from django.utils import timezone
 
-from .models import ProfilOrganisasi, SosialMedia
+from .models import ProfilOrganisasi, SosialMedia, Galeri
 from akun.models import Devisi
+from blog.models import Artikel, Video
 
 def home(request):
     template_name = 'sites/home.html'
-    devisi = Devisi.objects.all()
-    context = {'devisis': devisi}
+    devisis = Devisi.objects.all()
+    galleries = Galeri.objects.all()
+    video = Video.objects.latest('created_at')
+    articles = Artikel.objects.filter(
+        tanggal_terbit__lte=timezone.now()).order_by('-tanggal_terbit')[:4]
+    context = {
+        'devisis': devisis,
+        'galleries': galleries,
+        'video': video,
+        'articles': articles
+    }
     return render(request, template_name, context)
 
 
