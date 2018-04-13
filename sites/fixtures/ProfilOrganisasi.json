@@ -1,1 +1,24 @@
 [
+{
+    "model": "sites.profilorganisasi",
+    "pk": 1,
+    "fields": {
+        "nama": "Forum BEM DIY",
+        "profil_singkat": "Forum Badan Eksekutif Mahasiswa Daerah Istimewa Yogyakarta\u2014yang kemudian dikenal\r\ndengan sebutan Forum BEM DIY (FBD)\u2014didirikan dan dikukuhkan sebagai organisasi resmi\r\nperkumpulan lintas BEM se-DIY pada tanggal 16 juli 2011 oleh 17 BEM yang hadir dalam\r\nkonsolidasi Badan Eksekutif Mahasiswa (BEM) Perguruan Tinggi Se-Daerah Istimewa Yogyakrta\r\nyang digagas Dewan Eksekutif Mahasiswa (DEMA) UIN Sunan Kalijaga di Hotel University,\r\nMaguoharjo, Seleman, D.I. Yogyakarta.",
+        "profil_lengkap": "Forum Badan Eksekutif Mahasiswa Daerah Istimewa Yogyakarta\u2014yang kemudian dikenal\r\ndengan sebutan Forum BEM DIY (FBD)\u2014didirikan dan dikukuhkan sebagai organisasi resmi\r\nperkumpulan lintas BEM se-DIY pada tanggal 16 juli 2011 oleh 17 BEM yang hadir dalam\r\nkonsolidasi Badan Eksekutif Mahasiswa (BEM) Perguruan Tinggi Se-Daerah Istimewa Yogyakrta\r\nyang digagas Dewan Eksekutif Mahasiswa (DEMA) UIN Sunan Kalijaga di Hotel University,\r\nMaguoharjo, Seleman, D.I. Yogyakarta.\r\nInisiator dan Pendiri Forum BEM DIY, menuturkan (baca: Kompas, 17/7 2011) bahwa\r\ntujuan utama dideklarasikannya Forum BEM DIY untuk merumuskan kembali manifesto politik\r\nmahasiswa pasca reformasi. FBD lahir bersamaan dengan memuncaknya protes publik terhadap\r\nrezim Sosilo Bambang Yodoyono (SBY) yang dianggap gagal mengawal beberapa agenda\r\nreformasi, terutama dibidang politik dan penegakan supremasi hukum. Isu utama yang paling\r\ndisorot adalah soal korupsi, politik transaksional, dan lemahnya penegakan hukum.\r\nDeklarasi Forum BEM DIY pada tanggal 26 Juli 2011 yang berlangsung persis di depan\r\npintu Gedung Agung (Istana Kepresidenan), FBD menggelar mimbar bebas dengan seruan TUGU\r\n(Tujuh Gugatan) kepada Pemerintah. Yaitu, 1. Kembalikan konstitusi 1945 sebagai panglima, 2.\r\nPemerintahan yang bersih dari korupsi dan pelanggaran hukum, 3. Usut tuntas kasus pelanggaran\r\nHAM, 4. Adili aktor skandal century, 5. Tolak komersialisasi pendidikan, 6. Sejahterakan kaum\r\nburuh tani, 7. Tolak RUU Intelejen.\r\nDikemudian hari TUGU yang telah menjadi platform FBD mengalami penyempurnaan dan\r\nperbaikan\u2014sebagaimana telah di bakukan dalam Piagam Perjuang Forum BEM DIY dalam sidang\r\nMusyarawah Besar (MUBES) Ke-I Forum BEM DIY, tanggal 18 Februari 2012 yang bertempat di\r\nGedung Mandala Bhakti Wanitatama Yogyakarta.",
+        "visi": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, possimus quibusdam maxime error assumenda amet eveniet commodi quidem? Earum sunt amet officia dicta provident, culpa laborum sed pariatur. Eveniet, consequuntur?",
+        "misi": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, possimus quibusdam maxime error assumenda amet eveniet commodi quidem? Earum sunt amet officia dicta provident, culpa laborum sed pariatur. Eveniet, consequuntur?",
+        "alamat_lengkap": "Jl. Raya Janti Karang Jambe no. 143, Yogyakarta, Banguntapan, Bantul, Daerah Istimewa Yogyakarta 55918.",
+        "alamat_singkat": "NO/143. Yogyakarta, Indonesia",
+        "nomor_handphone": "+62-8123-4567",
+        "email": "info@bem-diy.org",
+        "website": "http://www.bem-diy.org",
+        "logo": "logo_igxufl8.png",
+        "latitude": "-7.784135",
+        "longitude": "110.4093",
+        "favicon": "favicon_9L1cJgt.ico",
+        "created_at": "2018-04-13T21:32:09.255Z",
+        "updated_at": "2018-04-13T21:32:09.255Z"
+    }
+}
+]
