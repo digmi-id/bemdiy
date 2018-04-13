@@ -4,7 +4,7 @@
     <!-- Search Widget -->
     <div class="widget widget-search">
         <form action="#">
-            <input type="search" placeholder="Enter Keywords..." />
+            <input type="search" placeholder="Cari artikel..." />
             <button class="search-btn" type="submit">
                 <i class="fa fa-search"></i>
             </button>
@@ -13,27 +13,24 @@
 
     <!-- Categories Widget -->
     <div class="widget widget-categories">
-        <h4>Categories
+        <h4>Kategori
             <span class="head-line"></span>
         </h4>
         <ul>
-            <li>
-                <a href="#">Brandign</a>
-            </li>
-            <li>
-                <a href="#">Design</a>
-            </li>
-            <li>
-                <a href="#">Development</a>
-            </li>
-            <li>
-                <a href="#">Graphic</a>
-            </li>
+            {% if categories %}
+                {% for category in categories %}
+                    <li>
+                        <a href="#">{{ category.nama }}</a>
+                    </li>
+                {% endfor %}
+            {% else %}
+                <li>Belum ada kategori...</li>
+            {% endif %}
         </ul>
     </div>
 
     <!-- Popular Posts widget -->
-    <div class="widget widget-popular-posts">
+    {% comment %} <div class="widget widget-popular-posts">
         <h4>Popular Post
             <span class="head-line"></span>
         </h4>
@@ -81,7 +78,7 @@
                 <div class="clearfix"></div>
             </li>
         </ul>
-    </div>
+    </div> {% endcomment %}
 
     <!-- Video Widget -->
     <div class="widget">
@@ -89,28 +86,23 @@
             <span class="head-line"></span>
         </h4>
         <div>
-            <iframe src="http://player.vimeo.com/video/63322694?byline=0&amp;portrait=0&amp;badge=0" width="800" height="450"></iframe>
+            <iframe src="{{ video.url }}" width="800" height="450" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
     </div>
 
     <!-- Tags Widget -->
     <div class="widget widget-tags">
-        <h4>Tags
+        <h4>Tag
             <span class="head-line"></span>
         </h4>
         <div class="tagcloud">
-            <a href="#">Portfolio</a>
-            <a href="#">Theme</a>
-            <a href="#">Mobile</a>
-            <a href="#">Design</a>
-            <a href="#">Wordpress</a>
-            <a href="#">Jquery</a>
-            <a href="#">CSS</a>
-            <a href="#">Modern</a>
-            <a href="#">Theme</a>
-            <a href="#">Icons</a>
-            <a href="#">Google</a>
+            {% if tags %}
+                {% for tag in tags %}
+                    <a href="#">{{ tag.nama }}</a>
+                {% endfor %}
+            {% else %}
+                <a>Belum ada tag...</a>
+            {% endif %}
         </div>
     </div>
-
 </div>
