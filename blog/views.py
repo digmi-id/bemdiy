@@ -28,3 +28,10 @@ class DetailView(generic.DetailView):
 
     def get_queryset(self):
         return Artikel.objects.filter(tanggal_terbit__lte=timezone.now())
+
+    def get_context_data(self, **kwargs):
+        context = super(DetailView, self).get_context_data(**kwargs)
+        context['tags'] = Tag.objects.all()
+        context['video'] = Video.objects.latest('created_at')
+        context['categories'] = Kategori.objects.all()
+        return context
