@@ -33,11 +33,11 @@
                         <div class="blog-post image-post">
                             <!-- Post Thumb -->
                             <div class="post-head">
-                                <a class="lightbox" title="This is an image title" href="{{ artikel.gambar.url }}">
+                                    <a class="lightbox" title="{{ artikel.judul | title }}" href="{{ artikel.gambar.url }}">
                                     <div class="thumb-overlay">
                                         <i class="fa fa-arrows-alt"></i>
                                     </div>
-                                    <img alt="" src="{{ artikel.gambar.url }}">
+                                    <img alt="" src="{{ artikel.gambar.url }}" height="720" width="100%">
                                 </a>
                             </div>
                             <!-- Post Content -->
