@@ -63,3 +63,20 @@ class SosialMedia(models.Model):
 
     def __str__(self):
         return self.nama
+
+class Klien(models.Model):
+    nama = models.CharField(max_length=200)
+    logo = models.ImageField()
+    url = models.URLField()
+
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        ordering = (
+            'created_at',
+            'updated_at',
+        )
+
+    def __str__(self):
+        return self.nama
