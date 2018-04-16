@@ -20,6 +20,7 @@ class ProfilOrganisasi(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
+        verbose_name_plural = "Profil Organisasi"
         ordering = (
             'created_at',
             'updated_at',
@@ -38,6 +39,7 @@ class Galeri(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
+        verbose_name_plural = "Galeri"
         ordering = (
             'created_at',
             'updated_at',
@@ -56,6 +58,7 @@ class SosialMedia(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
+        verbose_name_plural = "Sosial Media"
         ordering = (
             'created_at',
             'updated_at',
@@ -73,6 +76,7 @@ class Klien(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
+        verbose_name_plural = "Klien"
         ordering = (
             'created_at',
             'updated_at',
