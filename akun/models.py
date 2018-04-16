@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 
 class Devisi(models.Model):
-    nama = models.CharField(max_length=200)
+    nama = models.CharField(max_length=200, unique=True)
     deskripsi = models.TextField()
     icon = models.CharField(
         max_length=20,
@@ -14,6 +14,7 @@ class Devisi(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
+        verbose_name_plural = "Devisi"
         ordering = (
             'created_at',
             'updated_at',
