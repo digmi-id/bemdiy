@@ -10,30 +10,34 @@
 
         <!-- Indicators -->
         <ol class="carousel-indicators">
-            <li data-target="#main-slide" data-slide-to="0" class="active"></li>
-            <li data-target="#main-slide" data-slide-to="1"></li>
-            <li data-target="#main-slide" data-slide-to="2"></li>
+            {% for gallery in galleries %}
+                {% if gallery.banner %}
+                    <li data-target="#main-slide" data-slide-to="{{ forloop.counter }}" {% if forloop.first %} class="active" {% endif %}></li>
+                {% endif %}
+            {% endfor %}
         </ol>
         <!--/ Indicators end-->
 
         <!-- Carousel inner -->
         <div class="carousel-inner">
             {% for gallery in galleries %}
-                <div class="item {% if forloop.first %} active {% endif %}">
-                    <img class="img-responsive" src="{{ gallery.gambar.url }}" alt="slider">
-                    <div class="slider-content">
-                        <div class="col-md-12 text-center">
-                            <h2 class="animated2">
-                                <span>Forum Badan Eksekutif Mahasiswa <br>
-                                    <strong>D.I Yogyakarta</strong>
-                                </span>
-                            </h2>
-                            <h3 class="animated3">
-                                <span>{{ gallery.judul }}</span>
-                            </h3>
+                {% if gallery.banner %}
+                    <div class="item {% if forloop.first %} active {% endif %}">
+                        <img class="img-responsive" src="{{ gallery.gambar.url }}" alt="slider">
+                        <div class="slider-content">
+                            <div class="col-md-12 text-center">
+                                <h2 class="animated2">
+                                    <span>Forum Badan Eksekutif Mahasiswa <br>
+                                        <strong>D.I Yogyakarta</strong>
+                                    </span>
+                                </h2>
+                                <h3 class="animated3">
+                                    <span>{{ gallery.judul }}</span>
+                                </h3>
+                            </div>
                         </div>
                     </div>
-                </div>
+                {% endif %}
             {% endfor %}
         </div>
         <!-- Carousel inner end-->
