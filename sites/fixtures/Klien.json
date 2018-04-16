@@ -1,0 +1,57 @@
+[
+{
+    "model": "sites.klien",
+    "pk": 1,
+    "fields": {
+        "nama": "PT. Djarum",
+        "logo": "djarum.jpeg",
+        "url": "http://www.djarum.com/",
+        "created_at": "2018-04-16T14:15:13.206Z",
+        "updated_at": "2018-04-16T14:15:13.206Z"
+    }
+},
+{
+    "model": "sites.klien",
+    "pk": 2,
+    "fields": {
+        "nama": "PT. Indofood",
+        "logo": "indofood.jpg",
+        "url": "http://www.indofood.com/",
+        "created_at": "2018-04-16T14:15:29.773Z",
+        "updated_at": "2018-04-16T14:15:29.773Z"
+    }
+},
+{
+    "model": "sites.klien",
+    "pk": 3,
+    "fields": {
+        "nama": "PT. Pertamina",
+        "logo": "pertamina.png",
+        "url": "https://www.pertamina.com/",
+        "created_at": "2018-04-16T14:15:41.690Z",
+        "updated_at": "2018-04-16T14:15:41.690Z"
+    }
+},
+{
+    "model": "sites.klien",
+    "pk": 4,
+    "fields": {
+        "nama": "Net Media",
+        "logo": "netmediatama.png",
+        "url": "http://www.netmedia.co.id/",
+        "created_at": "2018-04-16T14:15:53.490Z",
+        "updated_at": "2018-04-16T14:15:53.490Z"
+    }
+},
+{
+    "model": "sites.klien",
+    "pk": 5,
+    "fields": {
+        "nama": "Tribun Jogja",
+        "logo": "tribunjogja.png",
+        "url": "http://jogja.tribunnews.com/",
+        "created_at": "2018-04-16T14:16:06.898Z",
+        "updated_at": "2018-04-16T14:16:06.898Z"
+    }
+}
+]
