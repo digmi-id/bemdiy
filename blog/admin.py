@@ -4,7 +4,8 @@ from django_summernote.admin import SummernoteModelAdmin
 from .models import Kategori, Tag, Artikel, Video
 
 class KategoriAdmin(admin.ModelAdmin):
-    list_display = ('nama', )
+    prepopulated_fields = {'slug': ('nama',) }
+    list_display = ('nama', 'slug')
     list_filter = ['nama']
     search_fields = ['nama']
     list_per_page = 25
