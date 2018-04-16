@@ -14,7 +14,7 @@
             <div class="col-md-6">
                 <ul class="breadcrumbs">
                     <li>
-                        <a href="#">Beranda</a>
+                        <a href="{% url 'home' %}">Beranda</a>
                     </li>
                     <li>Artikel</li>
                 </ul>
@@ -46,7 +46,7 @@
                                     <i class="fa fa-picture-o"></i>
                                 </div>
                                 <h2>
-                                    <a href="{% url 'blog:detail' artikel.id %}">{{ artikel.judul | title }}</a>
+                                    <a href="{% url 'blog:detail' artikel.slug %}">{{ artikel.judul | title }}</a>
                                 </h2>
                                 <ul class="post-meta">
                                     <li>Oleh <a href="#">{{ artikel.user }}</a></li>
@@ -54,7 +54,7 @@
                                     <li><a>{{ artikel.kategori }}</a></li>
                                 </ul>
                                 <p>{{ artikel.sinopsis }}</p>
-                                <a class="main-button" href="{% url 'blog:detail' artikel.id %}">Selengkapnya<i class="fa fa-angle-right"></i>
+                                <a class="main-button" href="{% url 'blog:detail' artikel.slug %}">Selengkapnya<i class="fa fa-angle-right"></i>
                                 </a>
                             </div>
                         </div>
@@ -64,9 +64,9 @@
                     {% include "includes/pagination.html" %}
                     <!-- End Pagination -->
                 {% else %}
-                <div class="post-content">
-                    <h2 style="text-align: center;">Maaf, belum ada artikel.</h2>
-                </div>
+                    <div class="post-content">
+                        <h2 style="text-align: center;">Maaf, belum ada artikel.</h2>
+                    </div>
                 {% endif %}
                 <!-- End Post -->
             </div>

@@ -21,6 +21,7 @@ class Tag(models.Model):
 class Artikel(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     judul = models.CharField(max_length=250)
+    slug = models.SlugField(max_length=250, unique=True)
     sinopsis = models.TextField()
     isi = models.TextField()
     kategori = models.ForeignKey(Kategori, on_delete=models.SET_NULL, blank=True, null=True)
@@ -47,6 +48,20 @@ class Artikel(models.Model):
 
     def __str__(self):
         return self.judul
+    
+    def _get_unique_slug(self):
+        slug = slugify(self.judul)
+        unique_slug = slug
+        num = 1
+        while Artikel.objects.filter(slug=unique_slug).exists():
+            unique_slug = '{}-{}'.format(slug, num)
+            num += 1
+        return unique_slug
+ 
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = self._get_unique_slug()
+        super().save()
 
 class Video(models.Model):
     judul = models.CharField(max_length=250)

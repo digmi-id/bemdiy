@@ -23,9 +23,10 @@ class VideoAdmin(admin.ModelAdmin):
 
 class ArtikelAdmin(SummernoteModelAdmin):
     fieldsets = [
-        (None,                  {'fields': ['user', 'judul', 'sinopsis', 'isi', 'kategori', 'tags', 'gambar']}),
+        (None,                  {'fields': ['user', 'judul', 'slug', 'sinopsis', 'isi', 'kategori', 'tags', 'gambar']}),
         ('Informasi tanggal',   {'fields': ['tanggal_terbit']}),
     ]
+    prepopulated_fields = {'slug': ('judul',) }
     summernote_fields = ('isi', )
     list_display = ('judul', 'kategori', 'user', 'tanggal_terbit', 'was_published_recently')
     list_filter = ['tanggal_terbit']
