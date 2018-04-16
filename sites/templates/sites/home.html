@@ -198,63 +198,13 @@
             <!-- Start Clients Carousel -->
             <div class="our-clients">
                 <div class="clients-carousel custom-carousel touch-carousel" data-appeared-items="5" data-navigation="false">
-
-                    <!-- Client 1 -->
-                    <div class="client-item item">
-                        <a href="#">
-                            <img src="{% static 'images/c1.png' %}" alt="" />
-                        </a>
-                    </div>
-
-                    <!-- Client 2 -->
-                    <div class="client-item item">
-                        <a href="#">
-                            <img src="{% static 'images/c2.png' %}" alt="" />
-                        </a>
-                    </div>
-
-                    <!-- Client 3 -->
-                    <div class="client-item item">
-                        <a href="#">
-                            <img src="{% static 'images/c3.png' %}" alt="" />
-                        </a>
-                    </div>
-
-                    <!-- Client 4 -->
-                    <div class="client-item item">
-                        <a href="#">
-                            <img src="{% static 'images/c4.png' %}" alt="" />
-                        </a>
-                    </div>
-
-                    <!-- Client 5 -->
-                    <div class="client-item item">
-                        <a href="#">
-                            <img src="{% static 'images/c5.png' %}" alt="" />
-                        </a>
-                    </div>
-
-                    <!-- Client 6 -->
-                    <div class="client-item item">
-                        <a href="#">
-                            <img src="{% static 'images/c6.png' %}" alt="" />
-                        </a>
-                    </div>
-
-                    <!-- Client 7 -->
-                    <div class="client-item item">
-                        <a href="#">
-                            <img src="{% static 'images/c7.png' %}" alt="" />
-                        </a>
-                    </div>
-
-                    <!-- Client 8 -->
-                    <div class="client-item item">
-                        <a href="#">
-                            <img src="{% static 'images/c8.png' %}" alt="" />
-                        </a>
-                    </div>
-
+                    {% for client in clients %}
+                        <div class="client-item item">
+                            <a href="{{ client.url }}">
+                                <img src="{{ client.logo.url }}" alt="{{ client.nama }}" target="_blank"/>
+                            </a>
+                        </div>
+                    {% endfor %}
                 </div>
             </div>
             <!-- End Clients Carousel -->
