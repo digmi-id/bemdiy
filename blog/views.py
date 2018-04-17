@@ -7,7 +7,7 @@ from django.utils import timezone
 from .models import Artikel, Kategori, Tag, Video
 
 class IndexView(generic.ListView):
-    template_name = 'blog/list.html'
+    template_name = 'blog/index.html'
     context_object_name = 'latest_artikel_list'
 
     def get_queryset(self):
@@ -31,6 +31,22 @@ class DetailView(generic.DetailView):
 
     def get_context_data(self, **kwargs):
         context = super(DetailView, self).get_context_data(**kwargs)
+        context['tags'] = Tag.objects.all()
+        context['video'] = Video.objects.latest('created_at')
+        context['categories'] = Kategori.objects.all()
+        return context
+
+
+class CategoryView(generic.ListView):
+    template_name = 'blog/category_list.html'
+    context_object_name = 'latest_artikel_list'
+
+    def get_queryset(self):
+        return Artikel.objects.filter(
+            tanggal_terbit__lte=timezone.now()).order_by('-tanggal_terbit')[:5]
+
+    def get_context_data(self, **kwargs):
+        context = super(IndexView, self).get_context_data(**kwargs)
         context['tags'] = Tag.objects.all()
         context['video'] = Video.objects.latest('created_at')
         context['categories'] = Kategori.objects.all()
