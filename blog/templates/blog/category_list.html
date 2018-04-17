@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block head_title %} Kontak Kami | {{ block.super }} {% endblock head_title%}
+
+{% block content %}
+<div class="page-banner">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Artikel</h2>
+                <p>Daftar artikel dalam kategori (...)</p>
+            </div>
+            <div class="col-md-6">
+                <ul class="breadcrumbs">
+                    <li>
+                        <a href="{% url 'home' %}">Beranda</a>
+                    </li>
+                    <li>Artikel</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="content">
+    <div class="container">
+        <div class="row blog-page">
+            <div class="col-md-9 blog-box">
+                <!-- Start Post -->
+                {% if latest_artikel_list %}
+                    {% for artikel in latest_artikel_list %}
+                        <div class="blog-post image-post">
+                            <!-- Post Thumb -->
+                            <div class="post-head">
+                                    <a class="lightbox" title="{{ artikel.judul | title }}" href="{{ artikel.gambar.url }}">
+                                    <div class="thumb-overlay">
+                                        <i class="fa fa-arrows-alt"></i>
+                                    </div>
+                                    <img alt="" src="{{ artikel.gambar.url }}" height="720" width="100%">
+                                </a>
+                            </div>
+                            <!-- Post Content -->
+                            <div class="post-content">
+                                <div class="post-type">
+                                    <i class="fa fa-picture-o"></i>
+                                </div>
+                                <h2>
+                                    <a href="{% url 'blog:detail' artikel.slug %}">{{ artikel.judul | title }}</a>
+                                </h2>
+                                <ul class="post-meta">
+                                    <li>Oleh <a href="#">{{ artikel.user }}</a></li>
+                                    <li>{{ artikel.tanggal_terbit }}</li>
+                                    <li><a>{{ artikel.kategori }}</a></li>
+                                </ul>
+                                <p>{{ artikel.sinopsis }}</p>
+                                <a class="main-button" href="{% url 'blog:detail' artikel.slug %}">Selengkapnya<i class="fa fa-angle-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    {% endfor %}
+                    
+                    <!-- Start Pagination -->
+                    {% include "includes/pagination.html" %}
+                    <!-- End Pagination -->
+                {% else %}
+                    <div class="post-content">
+                        <h2 style="text-align: center;">Maaf, belum ada artikel.</h2>
+                    </div>
+                {% endif %}
+                <!-- End Post -->
+            </div>
+
+            <!--Sidebar-->
+            {% include "includes/sidebar.html" with categories=categories tags=tags video=video %}
+            <!--End sidebar-->
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

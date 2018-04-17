@@ -17,15 +17,13 @@
             <span class="head-line"></span>
         </h4>
         <ul>
-            {% if categories %}
-                {% for category in categories %}
-                    <li>
-                        <a href="#">{{ category.nama }}</a>
-                    </li>
-                {% endfor %}
-            {% else %}
+            {% for category in categories %}
+                <li>
+                    <a href="{% url 'blog:category' category.slug %}">{{ category.nama }}</a>
+                </li>
+            {% empty %}
                 <li>Belum ada kategori...</li>
-            {% endif %}
+            {% endfor %}
         </ul>
     </div>
 
@@ -96,13 +94,11 @@
             <span class="head-line"></span>
         </h4>
         <div class="tagcloud">
-            {% if tags %}
-                {% for tag in tags %}
-                    <a href="#">{{ tag.nama }}</a>
-                {% endfor %}
-            {% else %}
+            {% for tag in tags %}
+                <a href="#">{{ tag.nama }}</a>
+            {% empty %}
                 <a>Belum ada tag...</a>
-            {% endif %}
+            {% endfor %}
         </div>
     </div>
 </div>
