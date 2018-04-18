@@ -78,21 +78,13 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    # }
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'bemdiy',
-        'USER': 'root',
-        'PASSWORD': '@Root<<0',
+        'USER': 'bemdiy',
+        'PASSWORD': '@Bemdiy<<0',
         'HOST': 'localhost',
         'PORT': '',
-        'OPTIONS': {
-            # 'sql_mode': 'traditional',
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
-        }
     }
 }
 
